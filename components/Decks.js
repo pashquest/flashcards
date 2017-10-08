@@ -10,15 +10,24 @@ state = {
 
 componentDidMount() {
   AsyncStorage.getAllKeys().then(AllKeys => this.setState({Decks: AllKeys}))
+  //var testeBasser = this.getDecks()
+  //console.log("NAVIGATION", this.props.navigation)
+  //his.props.navigation.addListener('focus', this.getDecks())
 }
 
 //currently not used.
-getDecks = () => {
-  AsyncStorage.getAllKeys().then(AllKeys => this.setState({Decks: AllKeys}))
+getDecks = async() => {
+  try{
+  let keys = await AsyncStorage.getAllKeys().then(AllKeys => this.setState({Decks: AllKeys}))
+  }
+    catch(error)
+  {
+    console.log("Error:", error)
+  }
 }
 
-  render() {
-  
+
+render() {
   var Decks = this.state.Decks
   Reactotron.log(this.state.Decks)
   

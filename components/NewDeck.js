@@ -17,9 +17,8 @@ export default class NewDeck extends React.Component {
      // Reactotron.log("SaveData and Navigate")
     }
 
-    const checkData = () => {
-          AsyncStorage.getAllKeys().then((AllKeys) => console.log(AllKeys))
-          }
+    //only Used in DEV Mode, to clean up the storage
+    const clearData = () => AsyncStorage.clear()
   
     return (
     <View style = {styles.container}>
@@ -29,6 +28,12 @@ export default class NewDeck extends React.Component {
           onPress={() => saveData()}  
           underlayColor="white">
           <Text style={styles.buttonText}> New Deck </Text>
+        </TouchableHighlight>
+
+        <TouchableHighlight style={styles.button} 
+          onPress={() => clearData()}  
+          underlayColor="white">
+          <Text style={styles.buttonText}> clearData </Text>
         </TouchableHighlight>
 
     </View>

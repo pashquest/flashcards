@@ -22,6 +22,8 @@
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
-    "react-navigation": "git+https://github.com/react-community/react-navigation.git"
+    "react-navigation": "git+https://github.com/react-community/react-navigation.git",
+    "react-navigation-addons": "github:satya164/react-navigation-addons",
+    "shallowequal": "^1.0.2"
   }
 }
