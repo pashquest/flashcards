@@ -1,3 +1,6 @@
+// The main source of this code is form the Udacity Course - Part Notifications
+// https://github.com/udacity/reactnd-UdaciFitness-complete/commit/63778456f674355e40044c673f4b966ebd446866
+
 import React from 'react'
 import { View, StyleSheet, AsyncStorage } from 'react-native'
 import { Notifications, Permissions } from 'expo'
