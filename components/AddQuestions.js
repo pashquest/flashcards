@@ -3,7 +3,6 @@ import { View,Text, TextInput, TouchableOpacity,StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import { submitQuestion} from "../utils/api"
 import { addQuiz } from "../actions/index"
-//Gut Done
 
 class AddQuestions extends Component {
     state = {

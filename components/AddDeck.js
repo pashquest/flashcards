@@ -3,7 +3,6 @@ import { Text,View,TextInput,TouchableHighlight, StyleSheet, AsyncStorage } from
 import { connect } from 'react-redux'
 import { addDeck } from "../actions/index"
 import { saveNewDeck } from "../utils/api"
-//Code GUT überarbietet
 
 class CreateDeck extends Component {
     state = {   

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-// GUT - DONE
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
 
 class Quiz extends Component {
     state = {

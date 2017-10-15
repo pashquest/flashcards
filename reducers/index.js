@@ -25,4 +25,4 @@ function decks (state = {}, action) {
     }
 }
 
-export default decks;
+export default decks

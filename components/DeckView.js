@@ -1,7 +1,6 @@
-import React, {Component } from 'react';
-import { Text,StyleSheet,TouchableOpacity,View,Animated } from 'react-native';
-import { connect } from 'react-redux';
-//Gut Done
+import React, {Component } from 'react'
+import { Text,StyleSheet,TouchableOpacity,View,Animated } from 'react-native'
+import { connect } from 'react-redux'
 
 
 class DeckView extends Component {

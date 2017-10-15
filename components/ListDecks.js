@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { getDecks } from '../utils/api'
 import { receiveDecks } from '../actions/index'
 import Reactotron from 'reactotron-react-native'
-//Gute Sehr gute Done 
 
 
 class ListDecks extends Component {
