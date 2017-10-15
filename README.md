@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 This is the repository that contains the code for the Mobile Flashcards App project from the Udacity React Nanodegree Program. The repository
 Code has been optimized for ANDROID only.
 
+### Mobile Platform
+* Android
+
 ### Table of Contents
 * [Getting Started](#getting-started)
 * [Prerequisites](#prerequisites)
