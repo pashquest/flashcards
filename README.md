@@ -18,7 +18,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 * [npm](https://www.npmjs.com/)
-* 
 
 If you have Node installed, you have NPM, if not install node:
 
@@ -43,8 +42,8 @@ Which will give you the option to simulate teh Application via expo. You can eit
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/)
 * [Github](https://github.com/)
-* [Genymotion] (https://www.genymotion.com/)
-* [Expo] (https://expo.io/)
+* [Genymotion](https://www.genymotion.com/)
+* [Expo](https://expo.io/)
 
 ### Authors
 Jamal Pashtun
