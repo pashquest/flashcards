@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Text, View, StyleSheet, TouchableOpacity} from 'react-native'
+import { clearLocalNotification, setLocalNotification} from '../utils/notification'
 
 class Quiz extends Component {
     state = {
@@ -47,6 +48,9 @@ class Quiz extends Component {
                 </View>
             )
         } else {
+                //clearNotification because at this Point one exam has been done.
+                clearLocalNotification().then(setLocalNotification())
+                
             return (
                 <View style={styles.container}>
                     <Text style={styles.quizFont}>End of Quiz</Text>

@@ -43,7 +43,7 @@ export function timeToString (time = Date.now()) {
   
                 let tomorrow = new Date()
                 tomorrow.setDate(tomorrow.getDate() + 1)
-                tomorrow.setHours(20)
+                tomorrow.setHours(10)
                 tomorrow.setMintutes(0)
   
                 Notifications.scheduleLocalNotificationAsync(
