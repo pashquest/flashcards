@@ -1,35 +1,59 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { TabNavigator } from 'react-navigation';
-import NewDeck from './components/NewDeck'
-import Decks from './components/Decks'
+import {View} from 'react-native';
+import { TabNavigator, StackNavigator } from 'react-navigation';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './reducers';
 import './ReactotronConfig'
-import Reactotron from 'reactotron-react-native' // To use specfiic Method from Reactotron
 
-
-//TabNavigator
-const Tabs = TabNavigator({
-    Decks:{
-      screen: Decks
-    },
-    NewDeck: {
-      screen: NewDeck
-    }
-  })
+import AddDeck from './components/AddDeck'
+import DeckView from './components/DeckView'
+import ListDecks from './components/ListDecks'
+import AddQuestions from "./components/AddQuestions"
+import Quiz from './components/Quiz'
+import { setLocalNotification } from "./utils/notification"
 
 export default class App extends React.Component {
+
+    //ToSetLocalNotifications
+    componentDidMount() {
+        setLocalNotification()
+    }
+
   render() {
+    const Tabs = TabNavigator({
+        ListDecks: {
+              screen: ListDecks
+          },
+          NewDeck: {
+              screen: AddDeck
+          }
+      });
+
+    const App = StackNavigator({
+          Home: {
+              screen: Tabs,
+              navigationOptions: {title: 'FlashCards' }
+          },
+          DeckView: {
+              screen: DeckView,
+          },
+          AddQuestions: {
+              screen: AddQuestions,
+              navigationOptions: {title: 'Add Quiz Item' }
+          },
+          Quiz: {
+            screen: Quiz,
+            navigationOptions: {title: 'Quiz' }
+        }
+      })
+
     return (
-      <Tabs />
+        <Provider store={createStore(reducer)}>
+            <View style={{flex: 1}}>
+                <App/>
+            </View>
+        </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
