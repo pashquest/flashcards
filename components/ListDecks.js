@@ -9,8 +9,13 @@ import Reactotron from 'reactotron-react-native'
 class ListDecks extends Component {
 
     componentDidMount() {
+        // This approach is from https://github.com/react-community/react-navigation/issues/680
+        this.props.navigation.addListener('focus', this.getData)
+    }
+
+    getData = () => {
         getDecks()
-            .then((decks) => this.props.dispatch(receiveDecks(JSON.parse(decks))))
+        .then((decks) => this.props.dispatch(receiveDecks(JSON.parse(decks))))
     }
 
     render() {

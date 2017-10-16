@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { View,Text, TextInput, TouchableOpacity,StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import { submitQuestion} from "../utils/api"
+import { submitQuestion, getDecks} from "../utils/api"
 import { addQuiz } from "../actions/index"
+import Reactotron from 'reactotron-react-native'
 
 class AddQuestions extends Component {
     state = {
@@ -13,11 +14,9 @@ class AddQuestions extends Component {
     submit = () => {
         const { question, answer } = this.state
         const { title } = this.props.navigation.state.params
-        //update ReduxState
-        this.props.dispatch(addQuiz({ title : title, question: question, answer: answer } ))
-         //update AsyncStorage
+
         submitQuestion(title, {question, answer})
-        this.props.navigation.navigate("ListDecks") 
+        this.props.navigation.navigate("ListDecks")
     }
 
     render() {

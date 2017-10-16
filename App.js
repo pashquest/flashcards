@@ -12,6 +12,7 @@ import ListDecks from './components/ListDecks'
 import AddQuestions from "./components/AddQuestions"
 import Quiz from './components/Quiz'
 import { setLocalNotification } from "./utils/notification"
+import { enhance } from 'react-navigation-addons';
 
 export default class App extends React.Component {
 
@@ -21,7 +22,7 @@ export default class App extends React.Component {
     }
 
   render() {
-    const Tabs = TabNavigator({
+    const Tabs = enhance(TabNavigator)({
         ListDecks: {
               screen: ListDecks
           },

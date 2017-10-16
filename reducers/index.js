@@ -14,7 +14,7 @@ function decks (state = {}, action) {
         case "ADD_QUIZ" :
             let quizItem = { question: action.question, answer: action.answer}
             let deck = state[action.title];
-            deck.questions.push(quizItem);
+            deck.questions.push({ question: action.question, answer: action.answer});
             return {
                 ...state,
                 deck

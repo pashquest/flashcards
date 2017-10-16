@@ -10,8 +10,7 @@ class CreateDeck extends Component {
     }
 
     submit = () => {
-            this.props.dispatch(addDeck({[this.state.deckTitle] : {title : this.state.deckTitle, questions : []}}));
-            saveNewDeck( this.state.deckTitle);
+            saveNewDeck(this.state.deckTitle);
             this.props.navigation.navigate("ListDecks") 
     }
 
